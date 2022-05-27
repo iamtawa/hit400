@@ -1,0 +1,33 @@
+{
+    "CentralVehicleDatabase":{
+        "1": {
+            "CustomerName": "Tawanda Murimwi",
+            "CarName": "Urus",
+            "NumberPlateId": "123ABC",
+            "PhoneNumber": "+263787226381"
+        },
+        "2": {
+            "CustomerName": "Tinotenda Murimwi",
+            "CarName": "Phantom",
+            "NumberPlateId": "456ABC",
+            "PhoneNumber": "+263771617577"
+        },
+        "3": {
+            "CustomerName": "Tawanda Steven",
+            "CarName": "Ghost",
+            "NumberPlateId": "789ABC",
+            "PhoneNumber": "+263773713039"
+        }, "4": {
+            "CustomerName": "Tawanda Godwin",
+            "CarName": "Maybach",
+            "NumberPlateId": "012ABC",
+            "PhoneNumber": "+263773851334"
+        } ,   
+        "5": {
+            "CustomerName": "Takudzwa Murimwi",
+            "CarName": "Gwagon",
+            "NumberPlateId": "345ABC",
+            "PhoneNumber": "+263714104162"
+        }   
+    }
+}
