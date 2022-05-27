@@ -78,13 +78,13 @@ GPIO.setup(PIN_ECHO, GPIO.IN)
 
 #for i in range(0,3):
 while True:
-        liteon(13,10)
-        liteoff(13,.1)
-        liteon(19,3)
-        liteoff(19,.1)
-        liteon(26,10)
-        objectDetection()
-        liteoff(26,.1)
+    liteon(13,10)
+    liteoff(13,.1)
+    liteon(19,3)
+    liteoff(19,.1)
+    liteon(26,10)
+    objectDetection()
+    liteoff(26,.1)
         
 print("done")
 GPIO.cleanup()
