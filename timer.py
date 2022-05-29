@@ -7,7 +7,7 @@ from .utils import object_detection, capture_image
   
 # define the countdown func.
 def countdown(pin, t):
-    print('Beging Traffic light timer')
+    print('Begining Traffic light timer')
     while t:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
