@@ -12,7 +12,7 @@ def countdown(pin, t):
     while t:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
-        if pin == get_traffic_light_color_from_pin(pin): # Calculate distance if traffic light is RED
+        if pin == RED: # Calculate distance if traffic light is RED
             print(f'Red traffic light: ...checking for distance {timer} remaining')
             distance = object_detection()
             if distance < MIN_DETECTION_DISTANCE:
