@@ -25,11 +25,12 @@ def countdown(pin, t):
 
 def capture_image():
     # define a video capture object
-    vid = cv2.VideoCapture(0)
+    cam = cv2.VideoCapture(0)
+    print(f'Is Camera Open: {cam.open(0)}')
 
     while(True):
         # Capture the video frame by frame
-        ret, frame = vid.read()
+        ret, frame = cam.read()
     
         # Display the resulting frame
         cv2.imshow('frame', frame)
