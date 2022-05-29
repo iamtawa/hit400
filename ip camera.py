@@ -10,17 +10,11 @@ cap = cv2.VideoCapture('rtsp://'+host+':554/'+stream)
 
 while True:
     _, frame = cap.read()
- 
- 
- 
+  
     #Place options to overlay on the video here.
     #I'll go over that later.
  
- 
- 
     cv2.imshow(('Camera'+str(camera_id)), frame)
- 
- 
  
     k = cv2.waitKey(0) & 0xFF
     if k == 27: #esc key ends process

@@ -6,7 +6,7 @@ cap = cv2.VideoCapture('plate.mp4')
 while True:
     ret, frame = cap.read()
     
-    cv2.imShow('frame')
+    cv2.imshow('frame')
     
     if cv2.wait(1) == ord('q'):
         break
