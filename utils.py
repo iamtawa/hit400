@@ -25,8 +25,8 @@ def countdown(pin, t):
 
 def capture_image():
     # define a video capture object
-    cam = cv2.VideoCapture(0)
-    print(f'Is Camera Open: {cam.open(0)}')
+    cam = cv2.VideoCapture("plate.mp4")
+    # print(f'Is Camera Open: {cam.open(0)}')
 
     while(True):
         # Capture the video frame by frame
