@@ -3,8 +3,30 @@ import time
 import cv2
 
 
-from constants import PIN_TRIGGER, PIN_ECHO
-from timer import countdown
+from constants import (
+    PIN_TRIGGER, 
+    PIN_ECHO, 
+    RED, 
+    MIN_DETECTION_DISTANCE
+)
+
+
+# define the countdown func.
+def countdown(pin, t):
+    print('Begining Traffic light timer')
+    while t:
+        mins, secs = divmod(t, 60)
+        timer = '{:02d}:{:02d}'.format(mins, secs)
+        if pin == RED: # Calculate distance if traffic light is RED
+            print(f'Red traffic light: ...checking for distance {timer} remaining')
+            distance = object_detection()
+            if distance < MIN_DETECTION_DISTANCE:
+                capture_image()
+        time.sleep(1)
+        t -= 1
+      
+    print('Ended Traffic light timer')
+  
 
 def capture_image():
     cap = cv2.VideoCapture('plate.mp4')
