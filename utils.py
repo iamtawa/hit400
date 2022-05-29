@@ -6,7 +6,7 @@ import cv2
 from constants import *
 
 # Pin Setup:
-# GPIO.setmode(GPIO.BCM)   # Broadcom pin-numbering scheme.
+GPIO.setmode(GPIO.BCM)   # Broadcom pin-numbering scheme.
 
 
 GPIO.setwarnings(False)
