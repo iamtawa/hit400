@@ -25,12 +25,12 @@ def countdown(pin, t):
 
 def capture_image():
     # define a video capture object
-    cam = cv2.VideoCapture("plate.mp4")
-    # print(f'Is Camera Open: {cam.open(0)}')
+    cap = cv2.VideoCapture("plate.mp4")
 
-    while(True):
-        # Capture the video frame by frame
-        ret, frame = cam.read()
+    # Read until video is completed 
+    while(cap.isOpened()):
+       # Capture frame-by-frame
+        ret, frame = cap.read()
     
         # Display the resulting frame
         cv2.imshow('frame', frame)
@@ -42,7 +42,7 @@ def capture_image():
             break
     
     # After the loop release the cap object
-    vid.release()
+    cap.release()
     # Destroy all the windows
     cv2.destroyAllWindows() 
 
