@@ -1,8 +1,8 @@
 # import the time module
 import time
 
-from .constants import RED, MIN_DETECTION_DISTANCE
-from .utils import object_detection, capture_image
+from constants import RED, MIN_DETECTION_DISTANCE
+from utils import object_detection, capture_image
 
   
 # define the countdown func.

@@ -3,8 +3,8 @@ import time
 import cv2
 
 
-from .constants import PIN_TRIGGER, PIN_ECHO
-from .utils import countdown
+from constants import PIN_TRIGGER, PIN_ECHO
+from utils import countdown
 
 def capture_image():
     cap = cv2.VideoCapture('plate.mp4')

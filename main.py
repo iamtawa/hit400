@@ -2,10 +2,10 @@ import RPi.GPIO as GPIO
 import time
 import cv2
 
-from  .timer import countdown
+from  timer import countdown
 
-from .constants import *
-from .utils import *
+from constants import *
+from utils import *
 
     
 # Pin Setup:
