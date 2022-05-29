@@ -8,11 +8,11 @@ from constants import *
 
 # define the countdown func.
 def countdown(pin, t):
-    print('Begining Traffic light timer')
+    print(f'[{get_traffic_light_color_from_pin(pin)}] Begining Traffic light timer')
     while t:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
-        if pin == RED: # Calculate distance if traffic light is RED
+        if pin == get_traffic_light_color_from_pin(pin): # Calculate distance if traffic light is RED
             print(f'Red traffic light: ...checking for distance {timer} remaining')
             distance = object_detection()
             if distance < MIN_DETECTION_DISTANCE:
@@ -76,3 +76,14 @@ def liteon(pin,tiim):
 def liteoff(pin,tiim):
     GPIO.output(pin,GPIO.LOW)
     time.sleep(tiim)
+
+
+
+def get_traffic_light_color_from_pin(pin):
+    if pin == GREEN:
+        color = "GREEN"
+    if pin == YELLOW:
+        color = "YELLOW"
+    if pin == RED:
+        color = "RED"
+    return color
