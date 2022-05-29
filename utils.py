@@ -5,17 +5,6 @@ import cv2
 
 from constants import *
 
-# Pin Setup:
-GPIO.setmode(GPIO.BCM)   # Broadcom pin-numbering scheme.
-
-
-GPIO.setwarnings(False)
-GPIO.setup(GREEN, GPIO.OUT)
-GPIO.setup(YELLOW, GPIO.OUT)
-GPIO.setup(RED, GPIO.OUT)  # Red
-
-GPIO.setup(PIN_TRIGGER, GPIO.OUT)
-GPIO.setup(PIN_ECHO, GPIO.IN)
 
 # define the countdown func.
 def countdown(pin, t):
@@ -51,7 +40,6 @@ def capture_image():
 
 
 def object_detection():
-    GPIO.setmode(GPIO.BCM)   # Broadcom pin-numbering scheme.
     GPIO.output(PIN_TRIGGER, GPIO.LOW)
     print ("Waiting for sensor to settle")
 
@@ -81,19 +69,10 @@ def object_detection():
 
 #on and off functions
 def liteon(pin,tiim):
-    GPIO.setmode(GPIO.BCM)   # Broadcom pin-numbering scheme.
-    GPIO.setup(GREEN, GPIO.OUT)
-    GPIO.setup(YELLOW, GPIO.OUT)
-    GPIO.setup(RED, GPIO.OUT)  # Red
-
     GPIO.output(pin,GPIO.HIGH)
     countdown(pin, int(tiim))
     # time.sleep(tiim)
 
 def liteoff(pin,tiim):
-    GPIO.setmode(GPIO.BCM)   # Broadcom pin-numbering scheme.
-    GPIO.setup(GREEN, GPIO.OUT)
-    GPIO.setup(YELLOW, GPIO.OUT)
-    GPIO.setup(RED, GPIO.OUT)  # Red
     GPIO.output(pin,GPIO.LOW)
     time.sleep(tiim)
