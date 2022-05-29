@@ -8,16 +8,16 @@ from constants import *
 
     
 # Pin Setup:
-GPIO.setmode(GPIO.BCM)   # Broadcom pin-numbering scheme.
+# GPIO.setmode(GPIO.BCM)   # Broadcom pin-numbering scheme.
 
 
-GPIO.setwarnings(False)
-GPIO.setup(GREEN, GPIO.OUT)
-GPIO.setup(YELLOW, GPIO.OUT)
-GPIO.setup(RED, GPIO.OUT)  # Red
+# GPIO.setwarnings(False)
+# GPIO.setup(GREEN, GPIO.OUT)
+# GPIO.setup(YELLOW, GPIO.OUT)
+# GPIO.setup(RED, GPIO.OUT)  # Red
 
-GPIO.setup(PIN_TRIGGER, GPIO.OUT)
-GPIO.setup(PIN_ECHO, GPIO.IN)
+# GPIO.setup(PIN_TRIGGER, GPIO.OUT)
+# GPIO.setup(PIN_ECHO, GPIO.IN)
 
 
 def main():
