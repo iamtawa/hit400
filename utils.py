@@ -3,13 +3,19 @@ import time
 import cv2
 
 
-from constants import (
-    PIN_TRIGGER, 
-    PIN_ECHO, 
-    RED, 
-    MIN_DETECTION_DISTANCE
-)
+from constants import *
 
+# Pin Setup:
+GPIO.setmode(GPIO.BOARD)   # Broadcom pin-numbering scheme.
+
+
+GPIO.setwarnings(False)
+GPIO.setup(GREEN, GPIO.OUT)
+GPIO.setup(YELLOW, GPIO.OUT)
+GPIO.setup(RED, GPIO.OUT)  # Red
+
+GPIO.setup(PIN_TRIGGER, GPIO.OUT)
+GPIO.setup(PIN_ECHO, GPIO.IN)
 
 # define the countdown func.
 def countdown(pin, t):
