@@ -82,11 +82,18 @@ def object_detection():
 #on and off functions
 def liteon(pin,tiim):
     GPIO.setmode(GPIO.BCM)   # Broadcom pin-numbering scheme.
+    GPIO.setup(GREEN, GPIO.OUT)
+    GPIO.setup(YELLOW, GPIO.OUT)
+    GPIO.setup(RED, GPIO.OUT)  # Red
+
     GPIO.output(pin,GPIO.HIGH)
     countdown(pin, int(tiim))
     # time.sleep(tiim)
 
 def liteoff(pin,tiim):
     GPIO.setmode(GPIO.BCM)   # Broadcom pin-numbering scheme.
+    GPIO.setup(GREEN, GPIO.OUT)
+    GPIO.setup(YELLOW, GPIO.OUT)
+    GPIO.setup(RED, GPIO.OUT)  # Red
     GPIO.output(pin,GPIO.LOW)
     time.sleep(tiim)
